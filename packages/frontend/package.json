@@ -5,6 +5,7 @@
 	"main": ".next/standalone/server",
 	"scripts": {
 		"build": "next build",
+		"export": "next export",
 		"dev": "next dev",
 		"start": "next start",
 		"typescript": "tsc",

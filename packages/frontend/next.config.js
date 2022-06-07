@@ -13,6 +13,7 @@ const config = {
 	},
 	experimental: {
 		outputStandalone: true,
+		outputFileTracingRoot: join(__dirname, "../../"),
 	},
 	sassOptions: {
 		includePaths: [join(__dirname, "src", "styles")],
