@@ -1,9 +1,9 @@
-import type { ClientToServer } from "@socketTypes/ClientToServer"
-import type { ServerToClient } from "@socketTypes/ServerToClient"
-
 import { io, Socket } from "socket.io-client"
 import create, { StoreApi, UseBoundStore } from "zustand"
 import createContext from "zustand/context"
+
+import type { ClientToServer } from "@socketTypes/ClientToServer"
+import type { ServerToClient } from "@socketTypes/ServerToClient"
 
 export interface Store {
 	io: Socket<ServerToClient, ClientToServer>
