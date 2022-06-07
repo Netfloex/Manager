@@ -1,0 +1,20 @@
+{
+	"name": "manager",
+	"version": "1.0.0",
+	"main": "dist/index.js",
+	"license": "MIT",
+	"private": true,
+	"scripts": {
+		"lint": "eslint .",
+		"prepare": "husky install"
+	},
+	"devDependencies": {
+		"@trivago/prettier-plugin-sort-imports": "^3.2.0",
+		"husky": "^7.0.4",
+		"prettier": "^2.6.2"
+	},
+	"workspaces": [
+		"packages/server",
+		"packages/frontend"
+	]
+}
