@@ -5,10 +5,10 @@
 			"@typings/*": ["src/typings/*"],
 			"@styles/*": ["src/styles/*"],
 
-			"@components": ["src/components"],
-			"@lib": ["src/lib"],
-			"@utils": ["src/utils"],
-			"@hooks": ["src/utils/hooks"],
+			"@components/*": ["src/components/*"],
+			"@lib/*": ["src/lib/*"],
+			"@utils/*": ["src/utils/*"],
+			"@hooks/*": ["src/utils/hooks/*"],
 			"@seo-default": ["src/next-seo.config"]
 		},
 		"outDir": "./dist",
