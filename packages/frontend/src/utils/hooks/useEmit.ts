@@ -1,7 +1,8 @@
 import { useStore } from "@hooks/useStore"
-import { ClientToServer } from "@socketTypes/ClientToServer"
 
 import { useState, useEffect } from "react"
+
+import { ClientToServer } from "@socketTypes/ClientToServer"
 
 export const useEmit = <
 	T extends keyof ClientToServer,

@@ -1,9 +1,10 @@
 import * as api from "@api"
-import { ClientToServer } from "@typings/socket/ClientToServer"
-import { SocketContainers } from "@typings/socket/Containers"
-import { ServerToClient } from "@typings/socket/ServerToClient"
 import chalk from "chalk"
 import { Server } from "socket.io"
+
+import type { ClientToServer } from "@socketTypes/ClientToServer"
+import type { SocketContainers } from "@socketTypes/Containers"
+import type { ServerToClient } from "@socketTypes/ServerToClient"
 
 const port = process.env.PORT ? parseInt(process.env.PORT) : 3000
 const io = new Server<ClientToServer, ServerToClient>(port, {})
