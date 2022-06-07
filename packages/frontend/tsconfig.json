@@ -9,7 +9,7 @@
 			"@lib/*": ["src/lib/*"],
 			"@utils/*": ["src/utils/*"],
 			"@hooks/*": ["src/utils/hooks/*"],
-			"@socketTypes/*": ["../server/src/typings/socket/*"],
+			"@socketTypes/*": ["../shared/typings/socket/*"],
 			"@seo-default": ["src/next-seo.config"]
 		},
 		"outDir": "./dist",

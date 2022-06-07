@@ -12,6 +12,7 @@
 		"paths": {
 			"@lib": ["src/lib"],
 			"@api": ["src/lib/api"],
+			"@socketTypes/*": ["../shared/typings/socket/*"],
 			"@typings/*": ["src/typings/*"],
 			"@utils": ["src/utils"]
 		},
