@@ -12,14 +12,15 @@ jobs:
             - name: Setup yarn and install dependencies
               uses: netfloex/actions/yarn@master
 
-            # - name: Check Types
-            #   run: yarn typescript
+            - name: "Frontend: Test ESLint"
+              run: yarn --cwd packages/frontend lint
+            - name: "Frontend: Check Types"
+              run: yarn --cwd packages/frontend typescript
 
-            - name: Test ESLint
-              run: yarn lint
-
-            # - name: Run Build
-            #   run: yarn build
+            - name: "Server: Test ESLint"
+              run: yarn --cwd packages/server lint
+            - name: "Server: Check Types"
+              run: yarn --cwd packages/server typescript
 
     # docker:
     #     runs-on: ubuntu-latest
