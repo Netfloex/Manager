@@ -1,0 +1,9 @@
+@use "colors";
+.sidebar {
+	position: sticky;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 10rem;
+	background-color: colors.$secondary-background;
+}

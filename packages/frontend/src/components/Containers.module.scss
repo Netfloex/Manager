@@ -2,13 +2,10 @@
 @use "variables";
 
 .table {
-	$margin: 4rem;
-
 	background-color: colors.$secondary-background;
 	padding: 1rem;
 	@include variables.rounded-lg;
-	width: calc(100% - $margin * 2);
-	margin: $margin;
+	width: calc(100%);
 	table-layout: fixed;
 
 	thead {

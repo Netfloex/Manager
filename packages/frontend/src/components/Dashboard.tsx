@@ -1,13 +1,14 @@
-import { FC } from "react"
+import styles from "./Dashboard.module.scss"
 
-import { ConnectionState } from "@components/ConnectionState"
-import { Containers } from "@components/Containers"
+import { Sidebar } from "@components/Sidebar"
 
-export const Dashboard: FC = () => {
+import type { FCC } from "@typings/React"
+
+export const Dashboard: FCC = ({ children }) => {
 	return (
-		<>
-			<ConnectionState />
-			<Containers />
-		</>
+		<div className={styles.dashboard}>
+			<Sidebar />
+			<div className={styles.content}>{children}</div>
+		</div>
 	)
 }

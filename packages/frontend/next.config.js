@@ -18,6 +18,9 @@ const config = {
 	sassOptions: {
 		includePaths: [join(__dirname, "src", "styles")],
 	},
+	async redirects() {
+		return [{ source: "/", destination: "/containers", permanent: false }]
+	},
 }
 
 module.exports = config

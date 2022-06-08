@@ -1,12 +1,5 @@
 import { NextPage } from "next"
 
-import { Dashboard } from "@components/Dashboard"
-import { SocketProvider } from "@components/SocketProvider"
-
-const Home: NextPage = () => (
-	<SocketProvider>
-		<Dashboard />
-	</SocketProvider>
-)
+const Home: NextPage = () => <>Home</>
 
 export default Home

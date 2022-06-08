@@ -8,3 +8,9 @@ body {
 	color: colors.$text;
 	font-family: "Work Sans", sans-serif;
 }
+
+html,
+body,
+#__next {
+	height: 100%;
+}
