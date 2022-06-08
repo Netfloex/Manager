@@ -21,6 +21,7 @@ const config = {
 	async redirects() {
 		return [{ source: "/", destination: "/containers", permanent: false }]
 	},
+	trailingSlash: true,
 }
 
 module.exports = config
