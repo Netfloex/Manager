@@ -1,6 +1,6 @@
-import { Mount } from "@typings/api/Mount"
-import { Port } from "@typings/api/Port"
-import { State } from "@typings/api/State"
+import { Mount } from "@apiTypes/Mount"
+import { Port } from "@apiTypes/Port"
+import { State } from "@apiTypes/State"
 
 export interface Container {
 	Id: string

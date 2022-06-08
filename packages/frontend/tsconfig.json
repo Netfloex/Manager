@@ -10,6 +10,7 @@
 			"@utils/*": ["src/utils/*"],
 			"@hooks/*": ["src/utils/hooks/*"],
 			"@socketTypes/*": ["../shared/typings/socket/*"],
+			"@apiTypes/*": ["../shared/typings/api/*"],
 			"@seo-default": ["src/next-seo.config"]
 		},
 		"outDir": "./dist",

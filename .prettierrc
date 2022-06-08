@@ -6,6 +6,9 @@
 	"tabWidth": 4,
 	"printWidth": 80,
 	"arrowParens": "always",
-	"importOrder": ["(@lib/.*)|(@utils/.*)", "(@typings/.*)|(@socketTypes/.*)"],
+	"importOrder": [
+		"(@lib/.*)|(@utils/.*)",
+		"(@typings/.*)|(@socketTypes/.*)|(@apiTypes/.*)"
+	],
 	"importOrderSeparation": true
 }

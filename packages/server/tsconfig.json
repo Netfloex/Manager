@@ -10,9 +10,10 @@
 		"noEmit": true,
 		"outDir": "dist",
 		"paths": {
-			"@lib": ["src/lib"],
+			"@lib/*": ["src/lib/*"],
 			"@api": ["src/lib/api"],
 			"@socketTypes/*": ["../shared/typings/socket/*"],
+			"@apiTypes/*": ["../shared/typings/api/*"],
 			"@typings/*": ["src/typings/*"],
 			"@utils": ["src/utils"]
 		},

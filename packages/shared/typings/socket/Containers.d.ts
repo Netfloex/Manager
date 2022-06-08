@@ -1,4 +1,4 @@
-import { State } from "@typings/api/State"
+import { State } from "@apiTypes/State"
 
 interface SocketContainer {
 	names: string[]
