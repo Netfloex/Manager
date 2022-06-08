@@ -1,0 +1,10 @@
+{
+	"name": "Docker Manager",
+	"short_name": "Manager",
+	"icons": [],
+	"theme_color": "#000",
+	"background_color": "#000",
+	"start_url": "/containers",
+	"display": "standalone",
+	"orientation": "portrait"
+}

@@ -1,6 +1,7 @@
 // @ts-check
 
 const { join } = require("path")
+const withPWA = require("next-pwa")
 
 /**
  * @type {import('next').NextConfig}
@@ -24,4 +25,10 @@ const config = {
 	trailingSlash: true,
 }
 
-module.exports = config
+module.exports = withPWA({
+	pwa: {
+		dest: "public",
+		disable: process.env.NODE_ENV === "development",
+	},
+	...config,
+})
