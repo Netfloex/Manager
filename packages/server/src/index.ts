@@ -4,6 +4,7 @@ import { Server } from "socket.io"
 
 import type { ClientToServer } from "@socketTypes/ClientToServer"
 import type { SocketContainers } from "@socketTypes/Containers"
+import { SocketImages } from "@socketTypes/Images"
 import type { ServerToClient } from "@socketTypes/ServerToClient"
 
 const port = process.env.PORT ? parseInt(process.env.PORT) : 3000
@@ -18,22 +19,17 @@ io.on("connection", (socket) => {
 	socket.on(
 		"containers",
 		async (callback: (containers: SocketContainers) => void) => {
-			const data = await api.containers()
-
-			const containers: SocketContainers = data.map((container) => ({
-				names: container.Names,
-				image: container.Image,
-				state: container.State,
-				id: container.Id,
-				ports: container.Ports,
-				mounts: container.Mounts,
-				created: new Date(container.Created * 1000),
-				status: container.Status,
-			}))
+			const containers = await api.containers()
 
 			callback(containers)
 		},
 	)
+
+	socket.on("images", async (callback: (images: SocketImages) => void) => {
+		const images = await api.images()
+
+		callback(images)
+	})
 })
 
 console.log("Starting...")
