@@ -25,6 +25,10 @@ io.on("connection", (socket) => {
 				image: container.Image,
 				state: container.State,
 				id: container.Id,
+				ports: container.Ports,
+				mounts: container.Mounts,
+				created: new Date(container.Created * 1000),
+				status: container.Status,
 			}))
 
 			callback(containers)

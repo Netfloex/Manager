@@ -1,10 +1,16 @@
+import { Mount } from "@apiTypes/Mount"
+import { Port } from "@apiTypes/Port"
 import { State } from "@apiTypes/State"
 
 interface SocketContainer {
-	names: string[]
-	image: string
-	state: State
 	id: string
+	image: string
+	names: string[]
+	state: State
+	ports: Port[]
+	mounts: Mount[]
+	created: Date
+	status: string
 }
 
 export type SocketContainers = SocketContainer[]

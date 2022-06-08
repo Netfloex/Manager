@@ -16,6 +16,10 @@ export const Containers: FC = () => {
 						<th>Name</th>
 						<th>Image</th>
 						<th>State</th>
+						<th>Port</th>
+						<th>Mounts</th>
+						<th>Created</th>
+						<th>Status</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -25,6 +29,23 @@ export const Containers: FC = () => {
 								<td>{container.names}</td>
 								<td>{container.image}</td>
 								<td>{container.state}</td>
+								<td>
+									{container.ports.map((e, i) => (
+										<div key={i}>
+											{e.PublicPort}:{e.PrivatePort}/
+											{e.Type}
+										</div>
+									))}
+								</td>
+								<td>
+									{container.mounts.map((mount, i) => (
+										<div key={i} style={{ marginTop: 10 }}>
+											{mount.Source}:{mount.Destination}
+										</div>
+									))}
+								</td>
+								<td>{container.created.toLocaleString()}</td>
+								<td>{container.status}</td>
 							</tr>
 						))}
 				</tbody>

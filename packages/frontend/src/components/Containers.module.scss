@@ -9,6 +9,8 @@
 	@include variables.rounded-lg;
 	width: calc(100% - $margin * 2);
 	margin: $margin;
+	table-layout: fixed;
+
 	thead {
 		th {
 			padding: 0.25rem;

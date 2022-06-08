@@ -1,5 +1,6 @@
 export interface Port {
 	PrivatePort: number
-	PublicPort: number
+	PublicPort?: number
 	Type: string
+	IP: string
 }
