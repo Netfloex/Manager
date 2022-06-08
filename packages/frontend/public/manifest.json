@@ -2,8 +2,8 @@
 	"name": "Docker Manager",
 	"short_name": "Manager",
 	"icons": [],
-	"theme_color": "#000",
-	"background_color": "#000",
+	"theme_color": "#222",
+	"background_color": "#222",
 	"start_url": "/containers",
 	"display": "standalone",
 	"orientation": "portrait"
