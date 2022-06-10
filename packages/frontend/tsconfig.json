@@ -11,7 +11,8 @@
 			"@hooks/*": ["src/utils/hooks/*"],
 			"@socketTypes/*": ["../shared/typings/socket/*"],
 			"@apiTypes/*": ["../shared/typings/api/*"],
-			"@seo-default": ["src/next-seo.config"]
+			"@seo-default": ["src/next-seo.config"],
+			"@pages": ["src/pages"]
 		},
 		"outDir": "./dist",
 		"target": "ES5",

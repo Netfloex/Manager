@@ -1,9 +1,52 @@
 @use "colors";
 .sidebar {
-	position: sticky;
+	position: absolute;
 	top: 0;
 	left: 0;
 	bottom: 0;
-	width: 10rem;
+
+	padding: 1rem;
+
 	background-color: colors.$secondary-background;
+
+	transform: translateX(-100%);
+	transition: transform 0.2s ease;
+
+	z-index: 1;
+
+	.connectionState {
+		text-align: center;
+	}
+
+	.hrWrapper {
+		padding: 1rem 0;
+
+		hr {
+			position: absolute;
+			left: 0;
+			right: 0;
+			border-color: rgba($color: #fff, $alpha: 0.7);
+		}
+	}
+
+	&.open {
+		transform: unset;
+	}
+
+	.link {
+		a {
+			padding: 0.5rem;
+			color: white;
+			text-decoration: none;
+
+			div {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				svg {
+					padding: 0.25rem;
+				}
+			}
+		}
+	}
 }

@@ -1,8 +1,19 @@
-.dashboard {
-	display: flex;
-	height: 100%;
-	.content {
-		padding: 4rem;
-		flex: 1;
+.content {
+	padding: 4rem;
+}
+
+.fadeOverlay {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	pointer-events: none;
+	background-color: unset;
+	transition: background-color 0.1s;
+
+	&.open {
+		background-color: rgba($color: #000000, $alpha: 0.4);
+		pointer-events: unset;
 	}
 }

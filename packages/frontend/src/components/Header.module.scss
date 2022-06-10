@@ -1,0 +1,29 @@
+@use "colors";
+
+.header {
+	position: sticky;
+	top: 0;
+	left: 0;
+	right: 0;
+	// height: 1rem;
+	background-color: colors.$secondary-background;
+
+	display: flex;
+	align-items: center;
+
+	.menuButton {
+		padding: 0.5rem;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: min-content;
+		svg {
+			font-size: 2rem;
+		}
+	}
+
+	.title {
+		font-size: larger;
+	}
+}
