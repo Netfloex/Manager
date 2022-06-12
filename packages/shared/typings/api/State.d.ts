@@ -14,3 +14,4 @@ export type State =
 	| "rejected"
 	| "remove"
 	| "orphaned"
+	| "exited"

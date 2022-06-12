@@ -2,7 +2,7 @@ import { Mount } from "@apiTypes/Mount"
 import { Port } from "@apiTypes/Port"
 import { State } from "@apiTypes/State"
 
-interface SocketContainer {
+export interface SocketContainer {
 	id: string
 	image: string
 	names: string[]

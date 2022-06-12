@@ -4,7 +4,11 @@ import { Container } from "@apiTypes/Container"
 import { SocketContainers } from "@socketTypes/Containers"
 
 export const containers = async (): Promise<SocketContainers> => {
-	const { data } = await http.get<Container[]>("/containers/json")
+	const { data } = await http.get<Container[]>("/containers/json", {
+		params: {
+			all: true,
+		},
+	})
 
 	return data.map((container) => ({
 		names: container.Names,

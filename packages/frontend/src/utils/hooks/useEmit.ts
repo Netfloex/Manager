@@ -14,10 +14,17 @@ export const useEmit = <
 	const [data, setData] = useState<V | false>(false)
 
 	useEffect(() => {
-		// @ts-expect-errorrrr
-		io.emit(ev, (data: V) => {
-			setData(data)
-		})
+		const run = (): void => {
+			// @ts-expect-errorrrr
+			io.emit(ev, (data: V) => {
+				setData(data)
+			})
+		}
+		run()
+		const interval = setInterval(run, 4000)
+		return () => {
+			clearInterval(interval)
+		}
 	}, [io, ev])
 
 	return data
