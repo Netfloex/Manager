@@ -15,8 +15,6 @@ export const Sidebar: FC = () => {
 	const sidebarOpen = useStore((state) => state.sidebarOpen)
 	const closeSidebar = useStore((state) => state.closeSidebar)
 
-	console.log(sidebarOpen)
-
 	return (
 		<div className={cx([styles.sidebar, sidebarOpen && styles.open])}>
 			<h1>{SEO.defaultTitle}</h1>

@@ -8,7 +8,6 @@ import { MdMenu } from "react-icons/md"
 
 export const Header: FC = () => {
 	const toggleSidebar = useStore((state) => state.toggleSidebar)
-	console.log(toggleSidebar)
 	const { name } = usePage() ?? {}
 
 	return (

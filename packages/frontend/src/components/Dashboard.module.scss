@@ -1,5 +1,8 @@
 .content {
-	padding: 4rem;
+	padding: 1rem;
+	@media (min-width: 800px) {
+		padding: 4rem;
+	}
 }
 
 .fadeOverlay {
