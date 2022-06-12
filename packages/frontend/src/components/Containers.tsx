@@ -53,13 +53,16 @@ export const Containers: FC = () => {
 					id: container.id,
 					Name: container.names,
 					Image: container.image,
-					Ports: container.ports.map((e, i) => (
-						<div key={i}>
-							{e.PublicPort}:{e.PrivatePort}/{e.Type}
+					Ports: container.ports.map((port) => (
+						<div key={JSON.stringify(port)}>
+							{port.PublicPort}:{port.PrivatePort}/{port.Type}
 						</div>
 					)),
-					Mounts: container.mounts.map((mount, i) => (
-						<div key={i} style={{ marginTop: 10 }}>
+					Mounts: container.mounts.map((mount) => (
+						<div
+							key={JSON.stringify(mount)}
+							style={{ marginTop: 10 }}
+						>
 							{mount.Source}:{mount.Destination}
 						</div>
 					)),
